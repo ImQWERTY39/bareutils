@@ -8,18 +8,21 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('BareUtils'), centerTitle: true),
-      body: Column(
-        children: [
-          TextButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const CoinTossPage()),
-              );
-            },
-            child: Text('Coin Toss'),
-          ),
-        ],
+
+      body: Center(
+        child: Column(
+          children: [
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const CoinTossPage()),
+                );
+              },
+              child: Text('Coin Toss'),
+            ),
+          ],
+        ),
       ),
     );
   }
