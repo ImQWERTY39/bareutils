@@ -27,7 +27,7 @@ class _DiceRollPageState extends State<DiceRollPage> {
                 TextButton(
                   onPressed: () {
                     setState(() {
-                      text = (rng.nextInt(5) + 1).toString();
+                      text = (rng.nextInt(6) + 1).toString();
                       tossNumber += 1;
                     });
                   },
