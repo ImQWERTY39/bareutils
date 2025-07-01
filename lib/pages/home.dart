@@ -1,4 +1,5 @@
 import 'package:bareutils/pages/coin_toss.dart';
+import 'package:bareutils/pages/dice.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -20,6 +21,15 @@ class HomePage extends StatelessWidget {
                 );
               },
               child: Text('Coin Toss'),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const DiceRollPage()),
+                );
+              },
+              child: Text('Dice Roll'),
             ),
           ],
         ),
