@@ -1,16 +1,12 @@
 # bareutils
 
-A new Flutter project.
+**bareutils** is a lightweight Flutter app that provides fast, no-frills utility tools for everyday randomness and decision-making.
 
-## Getting Started
+### ✨ Features
+- 🎯 **Coin Toss** – Flip a virtual coin to make quick decisions.
+- 🎲 **Dice Roll** – Roll a die for games or chance-based choices.
 
-This project is a starting point for a Flutter application.
+### 🧘 Philosophy
+Minimal, focused, and instant. No bloat. No distractions. Just the bare utilities you need.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+> More tools coming soon
