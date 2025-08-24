@@ -9,36 +9,47 @@ class DiceRollPage extends StatefulWidget {
 }
 
 class _DiceRollPageState extends State<DiceRollPage> {
+  final rng = Random();
   String text = "";
-  Random rng = Random();
-  int tossNumber = 0;
+  int rollNumber = 0;
+  var times = [0, 0, 0, 0, 0, 0];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Dice Roll'), centerTitle: true),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            Text(text, style: TextStyle(fontSize: 72.0)),
-            Column(
-              children: [
-                TextButton(
-                  onPressed: () {
-                    setState(() {
-                      text = (rng.nextInt(6) + 1).toString();
-                      tossNumber += 1;
-                    });
-                  },
-                  child: Text('Roll'),
-                ),
-                Text("Dice Roll number: $tossNumber"),
-              ],
-            ),
-          ],
-        ),
+      appBar: AppBar(title: const Text('Dice Roll'), centerTitle: true),
+      body: _pageContent(),
+    );
+  }
+
+  Widget _pageContent() {
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          Text(text, style: TextStyle(fontSize: 72.0)),
+          _diceArea(),
+        ],
       ),
     );
+  }
+
+  Widget _diceArea() {
+    return Column(
+      children: [
+        TextButton(onPressed: _rollLogic, child: const Text('Roll')),
+        Text("Dice Roll number: $rollNumber"),
+      ],
+    );
+  }
+
+  void _rollLogic() {
+    setState(() {
+      int number = rng.nextInt(6);
+
+      times[number] += 1;
+      text = (number + 1).toString();
+      rollNumber += 1;
+    });
   }
 }
