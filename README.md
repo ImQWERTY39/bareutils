@@ -5,6 +5,7 @@
 ### ✨ Features
 - 🎯 **Coin Toss** – Flip a virtual coin to make quick decisions.
 - 🎲 **Dice Roll** – Roll a die for games or chance-based choices.
+- ➕ Counter – Simple tap-to-increment
 
 ### 🧘 Philosophy
 Minimal, focused, and instant. No bloat. No distractions. Just the bare utilities you need.
